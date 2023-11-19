@@ -15,10 +15,10 @@
         "128": "images/book-icon.jpg"
     },
     "options_page": "options.html",
-    "permissions": ["storage"],
+    "permissions": ["storage", "activeTab", "scripting"],
     "content_scripts": [
         {
-          "js": ["content-script.js"],
+          "js": ["content-script.js", "jquery-3.7.0.min.js"],
           "matches": ["<all_urls>"]
         }
       ]
