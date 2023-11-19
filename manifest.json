@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "readAI Chrome Extension",
+    "version": "1.0.1",
+
+    "description": "description of readAI TODO",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "readAI"
+    },
+    "icons": {
+        "16": "book-icon.jpg",
+        "32": "book-icon.jpg",
+        "48": "book-icon.jpg",
+        "128": "book-icon.jpg"
+    }
+}
