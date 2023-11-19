@@ -1,3 +1,5 @@
+charLimit = 1000000;
+
 window.onload = () => {
     chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         if (message.msg === 'getWordCount' && message.from=='popup') {
@@ -102,4 +104,29 @@ for (var i = 0, max = allTags.length; i < max; i++) {
 }
 // Separate all the text elements with a newline
 return visibleText.join('\n');
+}
+
+function display(text) {
+    // Create a purple header
+    header = document.createElement("div");
+    header.style.backgroundColor = "#d18ee2";
+    header.style.padding = "5px";
+
+    // Write the text with a bit of styling and add it to the header
+    tldr = document.createElement("p");
+    tldr.textContent = text;
+    tldr.style.margin = "10px 100px";
+    tldr.style.fontSize = "medium";
+    tldr.style.color = "white";
+    tldr.style.textAlign = "center";
+    tldr.style.fontFamily = "Verdana, Geneva, sans-serif";
+    header.appendChild(tldr);
+
+    // Insert the header immediately before the HTML body
+    document.body.parentNode.insertBefore(header, document.body);
+}
+
+function isHidden(el) {
+    var style = window.getComputedStyle(el);
+    return ((style.display === 'none') || (style.visibility === 'hidden'))
 }
