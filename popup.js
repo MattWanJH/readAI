@@ -48,4 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector("#summarizebutton").addEventListener("click", test2);
+    function test2() {
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+            const tab = tabs[0];
+            chrome.tabs.sendMessage(tab.id, {from: 'popup', msg: 'getSummary'});
+            }
+        )
+    }
+})
+
 
