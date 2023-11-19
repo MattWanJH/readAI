@@ -9,10 +9,10 @@
         "default_title": "readAI"
     },
     "icons": {
-        "16": "book-icon.jpg",
-        "32": "book-icon.jpg",
-        "48": "book-icon.jpg",
-        "128": "book-icon.jpg"
+        "16": "images/book-icon.jpg",
+        "32": "images/book-icon.jpg",
+        "48": "images/book-icon.jpg",
+        "128": "images/book-icon.jpg"
     },
     "options_page": "options.html",
     "permissions": ["storage"],
