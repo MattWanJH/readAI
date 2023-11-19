@@ -5,7 +5,7 @@
 
     "description": "description of readAI TODO",
     "action": {
-        "default_popup": "index.html",
+        "default_popup": "popup.html",
         "default_title": "readAI"
     },
     "icons": {
@@ -13,5 +13,13 @@
         "32": "book-icon.jpg",
         "48": "book-icon.jpg",
         "128": "book-icon.jpg"
-    }
+    },
+    "options_page": "options.html",
+    "permissions": ["storage"],
+    "content_scripts": [
+        {
+          "js": ["content-script.js"],
+          "matches": ["<all_urls>"]
+        }
+      ]
 }
