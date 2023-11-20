@@ -9,10 +9,10 @@
         "default_title": "readAI"
     },
     "icons": {
-        "16": "images/book-icon.jpg",
-        "32": "images/book-icon.jpg",
-        "48": "images/book-icon.jpg",
-        "128": "images/book-icon.jpg"
+        "16": "images/16ai.png",
+        "32": "images/32ai.png",
+        "48": "images/48ai.png",
+        "128": "images/128ai.png"
     },
     "options_page": "options.html",
     "permissions": ["storage", "activeTab", "scripting"],
