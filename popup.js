@@ -2,7 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelector("#mybutton").addEventListener("click", test);
     function test() {
-        alert("")
         chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
             const tab = tabs[0];
             chrome.tabs.sendMessage(tab.id, {from: 'popup', msg: 'getWordCount'});
