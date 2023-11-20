@@ -2,9 +2,9 @@
 Made with ❤️ by Kathleen Tom, Matt Wan, Selina Ye for HackCamp 2023
 
 ## Installation: 
-To run a chrome extension 
+To run a Chrome extension 
 1. Clone the repository 
-2. Go into a Chrome-based Browser
+2. Go into a Chrome-based browser
 3. Enter the extensions tab, URL should be: chrome://extensions/
 4. Enable developer mode on the top right
 5. Enable ReadAI
