@@ -1,12 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "readAI",
+    "name": "ReadAI",
     "version": "1.0.1",
 
     "description": "Generate a word count and a summary of the text on a webpage.",
     "action": {
         "default_popup": "popup.html",
-        "default_title": "readAI"
+        "default_title": "ReadAI"
     },
     "icons": {
         "16": "images/16ai.png",

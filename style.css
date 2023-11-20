@@ -5,10 +5,11 @@
 .option_button{
     background: var(--purple, #7B61FF);
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     height: 50px;
     width: 200px; 
-    border-radius: 15px;
+    border: none;
+    border-radius: 20px;
     margin: 20px auto;
 
     text-decoration: none;
@@ -17,4 +18,15 @@
     text-decoration: none;  
     font: Be Vietnam;
 
+}
+
+.button_icon{
+    height: 64px;
+    width: 64px;
+    display: block;
+    margin: 20px auto;
+}
+
+body {
+    background: #d2ccf0;
 }
