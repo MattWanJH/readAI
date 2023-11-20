@@ -1,3 +1,7 @@
+*{
+    font: Be Vietnam;
+}
+
 .option_button{
     background: var(--purple, #7B61FF);
     color: white;
@@ -5,10 +9,12 @@
     height: 50px;
     width: 200px; 
     border-radius: 15px;
-    margin: 20px;
+    margin: 20px auto;
 
     text-decoration: none;
     display: block;
     text-align: center;      
     text-decoration: none;  
+    font: Be Vietnam;
+
 }
