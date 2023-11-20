@@ -3,7 +3,7 @@
     "name": "readAI",
     "version": "1.0.1",
 
-    "description": "readAI is a Chrome extension for people with read disabilities or challenges. For a given webpage, readAI challenges generate a word count and a summary of the text.",
+    "description": "Generate a word count and a summary of the text on a webpage.",
     "action": {
         "default_popup": "popup.html",
         "default_title": "readAI"
