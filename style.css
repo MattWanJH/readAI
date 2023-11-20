@@ -1,4 +1,16 @@
 .option_button{
-    border-radius: 17.852px;
+
+    text-decoration: none; /* Removes underline from hyperlink */
     background: var(--purple, #7B61FF);
+    color: var(--purple, #7B61FF);
+
+    height: 50px;
+    width: 200px; 
+    border-radius: 15px;
+    margin: 20px;
+
+    
+    display: block;
+    text-align: center;      
+    text-decoration: none;
 }
