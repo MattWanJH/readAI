@@ -1,9 +1,9 @@
 {
     "manifest_version": 3,
-    "name": "readAI Chrome Extension",
+    "name": "readAI",
     "version": "1.0.1",
 
-    "description": "description of readAI TODO",
+    "description": "readAI is a Chrome extension for people with read disabilities or challenges. For a given webpage, readAI challenges generate a word count and a summary of the text.",
     "action": {
         "default_popup": "popup.html",
         "default_title": "readAI"
