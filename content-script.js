@@ -1,7 +1,7 @@
-charLimit = 1000000;
+charLimit = 1000000000;
 
 window.onload = () => {
-    chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    chrome.runtime.onMessage.addListener((message) => {
         if (message.msg === 'getWordCount' && message.from=='popup') {
             // Get the text content of the entire body of the webpage
             const text = document.body.innerText || document.body.textContent;
@@ -17,26 +17,24 @@ window.onload = () => {
             //   sendResponse({ wordCount });
         }
     });
-} 
 
-window.onload = () => {
-    chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+
+    chrome.runtime.onMessage.addListener((message) => {
         if (message.msg === 'getSummary' && message.from=='popup') {
-            //alert("SUMMARIZE!!!");
-            };
-            });
-        }
+            const text = document.body.innerText || document.body.textContent;
+            summarize(text);
+        };
+    });
+}
 
 function summarize(text) {
-// Use the user's stored API key
-chrome.storage.sync.get('apiKey', key => {
     // Set up the request to send to the endpoint
     options = {
         "method": "POST",
         "headers": {
             "accept": "application/json",
             "content-type": "application/json",
-            "authorization": "Bearer " + key.apiKey
+            "authorization": "Bearer " + "uLafXttiDSrtKsisoFz0b3bXmieNWv12zidffao7"
         },
         // These are the summarize endpt paramters.
         // Try playing around with them and reloading the extension to see
@@ -52,7 +50,7 @@ chrome.storage.sync.get('apiKey', key => {
             // We tell the model that it's summarizing a webpage
             "additional_command": "of this webpage"
         })
-    }});
+    }
     
     fetch('https://api.cohere.ai/v1/summarize', options)
     .then((response) => response.json())
@@ -60,10 +58,10 @@ chrome.storage.sync.get('apiKey', key => {
         if (response.summary === undefined) {
             // If there's no summary in the endpoint's response,
             // display whatever error message it returned
-            display("There was an error: " + response.message);
+            alert("There was an error: " + response.message)
         } else {
             // Otherwise, display the summary
-            display("tl;dr: " + response.summary);
+            alert("tl;dr: " + response.summary);
         }
     });
 }
@@ -106,26 +104,6 @@ for (var i = 0, max = allTags.length; i < max; i++) {
 }
 // Separate all the text elements with a newline
 return visibleText.join('\n');
-}
-
-function display(text) {
-    // Create a purple header
-    header = document.createElement("div");
-    header.style.backgroundColor = "#d18ee2";
-    header.style.padding = "5px";
-
-    // Write the text with a bit of styling and add it to the header
-    tldr = document.createElement("p");
-    tldr.textContent = text;
-    tldr.style.margin = "10px 100px";
-    tldr.style.fontSize = "medium";
-    tldr.style.color = "white";
-    tldr.style.textAlign = "center";
-    tldr.style.fontFamily = "Verdana, Geneva, sans-serif";
-    header.appendChild(tldr);
-
-    // Insert the header immediately before the HTML body
-    document.body.parentNode.insertBefore(header, document.body);
 }
 
 function isHidden(el) {
